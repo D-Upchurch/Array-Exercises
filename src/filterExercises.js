@@ -55,6 +55,7 @@ export const getAvailableInstructors = () => {
    let instructorArray = activeInstructors()
    console.log(instructorArray)
     let filterAvailableInstructors = instructors.filter(instructor => !instructorArray.includes(instructor.id))
+    console.log(filterAvailableInstructors)
     return filterAvailableInstructors;
 }
 getAvailableInstructors();

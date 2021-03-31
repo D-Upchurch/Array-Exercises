@@ -24,3 +24,16 @@ export const getStudentNames = () => {
     <h2>Cohort 43</h2>
   </div>
 */
+
+export const StudentList = () => {
+  let HTMLSingleString = students.map(student => {
+    return `
+    <div>
+      <h1>${student.firstName} ${student.lastName}</h1>
+      <h2>Cohort ${student.cohort}</h2>
+    </div>
+    `
+  })
+  let HTMLStringArray = HTMLSingleString.join("")
+  return HTMLStringArray
+}
